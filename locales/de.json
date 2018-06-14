@@ -185,7 +185,7 @@
                 "action": "Diesen Ordner auswählen"
               },
               "manager": {
-                "label": "Paketverwlatung",
+                "label": "Paketverwaltung",
                 "default": "Standard"
               },
               "options": {
