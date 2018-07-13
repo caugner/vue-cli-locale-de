@@ -17,5 +17,13 @@
   "bugs": {
     "url": "https://github.com/caugner/vue-cli-locale-de/issues"
   },
-  "homepage": "https://github.com/caugner/vue-cli-locale-de#readme"
+  "homepage": "https://github.com/caugner/vue-cli-locale-de#readme",
+  "scripts": {
+    "test": "node ./test.js"
+  },
+  "devDependencies": {
+    "fetch": "^1.1.0",
+    "lodash": "^4.17.10",
+    "prettier": "^1.13.7"
+  }
 }
