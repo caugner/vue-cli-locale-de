@@ -9,7 +9,7 @@ const markDeprecated = function(obj) {
         if (!/^DEPRECATED /.test(obj)) {
             obj = `DEPRECATED ${obj}`
         }
-    } else if (typeof oldValue === 'object') {
+    } else if (typeof obj === 'object') {
       Object.keys(obj).forEach(key => obj[key] = markDeprecated(obj[key]));
     }
 

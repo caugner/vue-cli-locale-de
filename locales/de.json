@@ -221,13 +221,6 @@
             "vue": {
               "label": "Vue"
             }
-          },
-          "eslint-extra": {
-            "description": "Zusätzliche ESLint-Einstellungen",
-            "lintOnSave": {
-              "description": "Quelldateien beim Speichern automatisch überprüfen",
-              "message": "Lint beim Speichern"
-            }
           }
         },
         "suggestions": {
