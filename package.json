@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/caugner/vue-cli-locale-de#readme",
   "scripts": {
+    "fix": "node ./fix.js",
     "test": "node ./test.js"
   },
   "devDependencies": {
