@@ -1,6 +1,23 @@
 {
   "org": {
     "vue": {
+      "cli-service": {
+        "suggestions": {
+          "progress": "Installiert {arg0}...",
+          "vue-devtools": {
+            "label": "Installiert devtools",
+            "message": "Offizielle Browser-DevTools-Erweiterung zum Debuggen von Vue.js-Anwendungen, um deine Komponenten deinen Vuex-Store und Events zu inspizieren."
+          },
+          "vue-router-add": {
+            "label": "Fügt vue-router hinzu",
+            "message": "Offizielle Bibliothek, um virtuelle Seiten in einer Single-Page-App bereitzustellen. Jede Route rendert eine andere Komponente."
+          },
+          "vuex-add": {
+            "label": "Fügt vuex hinzu",
+            "message": "Offizielles zentralisierte State-Management-Lösung für größere Apps. Sehr nützlich, wenn mehrere Komponenten auf die gleichen Daten zugreifen müssen."
+          }
+        }
+      },
       "components": {
         "connection-status": {
           "connected": "Verbunden!",
@@ -22,6 +39,7 @@
             "skip": "Überspringen"
           },
           "empty": "Keine Änderung gefunden",
+          "error": "Änderungen konnten nicht ermittelt werden",
           "files-changed": "Dateien geändert",
           "modals": {
             "commit": {
@@ -37,9 +55,20 @@
           "search-file": "Datei suchen"
         },
         "folder-explorer": {
+          "new-folder": {
+            "action": "Neuer Ordner",
+            "cancel": "Abbrechen",
+            "create": "Erstellen",
+            "field": {
+              "subtitle": "Du kannst den Ordner-Separator verwenden, um mehrere verschachtelte Verzeichnisse auf einmal zu erstellen.",
+              "title": "Neuer Ordner"
+            },
+            "title": "Erstelle neuen Ordner"
+          },
           "toolbar": {
             "empty": "Noch keine Lesezeichen-Ordner.",
             "placeholder": "Gib einen vollständigen Ordnerpfad ein",
+            "show-hidden": "Zeige versteckte Ordner",
             "tooltips": {
               "edit-path": "Pfad bearbeiten",
               "favorite": "Lesezeichen",
@@ -64,9 +93,20 @@
         "progress-screen": {
           "close": "Schließen"
         },
+        "project-dependency-item": {
+          "actions": {
+            "uninstall": "Deinstalliere {target}",
+            "update": "Aktualisiere {target}"
+          },
+          "installed": "Installiert",
+          "latest": "aktuell",
+          "version": "Version",
+          "wanted": "ausgewählt"
+        },
         "project-nav": {
           "tooltips": {
             "configuration": "Konfiguration",
+            "dependencies": "Abhängigkeiten",
             "more": "Mehr",
             "plugins": "Plugins",
             "tasks": "Aufgaben"
@@ -91,7 +131,14 @@
         "project-select-list-item": {
           "tooltips": {
             "delete": "Löschen",
-            "favorite": "Favorit umschalten"
+            "favorite": "Favorit umschalten",
+            "open-in-editor": "Im Editor öffnen"
+          }
+        },
+        "project-tasks-dropdown": {
+          "tooltips": {
+            "running-tasks": "{count} laufende Aufgaben",
+            "tasks": "Aufgaben"
           }
         },
         "prompt-list": {
@@ -101,6 +148,7 @@
           "empty": "Keine Konfiguration"
         },
         "status-bar": {
+          "dark-mode": "Dunkelmodus anschalten",
           "log": {
             "empty": "Noch keine Protokolle",
             "tooltip": "Protokolle<br><i>Klicke, um die Vue-CLI-Protokolle umzuschalten</i>"
@@ -113,7 +161,15 @@
             "tooltip": "Aktuelles Projekt<br><i>Klicke, um die Projektverwaltung umzuschalten</i>"
           },
           "report-bug": "Fehler melden",
+          "reset-plugin-api": "Plugin-API aktualisieren",
           "translate": "Übersetzung verbessern"
+        },
+        "suggestion-bar": {
+          "modal": {
+            "cancel": "Abbrechen",
+            "continue": "Weiter"
+          },
+          "suggestion": "Empfehlung"
         },
         "terminal-view": {
           "buttons": {
@@ -122,7 +178,10 @@
           }
         },
         "top-bar": {
-          "no-favorites": "Noch keine Favoriten-Projekte"
+          "favorite-projects": "Lieblingsprojekte",
+          "homepage": "Startseite",
+          "no-favorites": "Noch keine Favoriten-Projekte",
+          "recent-projects": "Letzte Projekte"
         },
         "view-badge": {
           "labels": {
@@ -148,9 +207,19 @@
         "config": {
           "eslint": {
             "description": "Fehlerprüfung & Code-Qualität",
+            "extra": {
+              "label": "Extra",
+              "lintOnSave": {
+                "description": "Quelldateien automatisch beim Speichern linten",
+                "message": "Lint beim Speichern"
+              }
+            },
             "groups": {
               "recommended": "Empfohlen",
               "strongly-recommended": "Sehr empfohlen"
+            },
+            "vue": {
+              "label": "Vue"
             }
           },
           "eslint-extra": {
@@ -161,6 +230,11 @@
             }
           }
         },
+        "suggestions": {
+          "open-eslintrc": {
+            "label": "eslintrc öffnen"
+          }
+        },
         "tasks": {
           "lint": {
             "description": "Überprüft und korrigiert Dateien",
@@ -168,10 +242,24 @@
           }
         }
       },
+      "jest": {
+        "tasks": {
+          "test": {
+            "description": "Unit-Tests mit Jest ausführen",
+            "notify": "Zeigt eine Benachrichtigung nach jedem Durchlauf",
+            "update": "Jeden Snapshot neu aufzeichnen, der bei diesem Durchlauf fehlschlägt",
+            "watch": "Dateien auf Änderungen beobachten und zugehörige Tests zu den geänderten Dateien ausführen"
+          }
+        }
+      },
       "mixins": {
         "progress": {
           "completion-hooks": "Completion-Hooks laufen...",
           "creating": "Projekt wird erstellt...",
+          "dependencies-update": "Aktualisiere {arg0} Plugins...",
+          "dependency-install": "Installiere {arg0}...",
+          "dependency-uninstall": "Deinstalliere {arg0}...",
+          "dependency-update": "Aktualisiere {arg0}...",
           "deps-install": "Zusätzliche Abhängigkeiten installieren...",
           "done": "Projekt erfolgreich erstellt",
           "fetch-remote-preset": "Remote-Presets abrufen...",
@@ -181,13 +269,24 @@
           "plugin-invoke": "Rufe {arg0} auf...",
           "plugin-uninstall": "Deinstalliere {arg0}...",
           "plugin-update": "Aktualisiere {arg0}...",
-          "plugins-install": "Vue-CLI-Plugins werden installiert. Das kann ein bisschen dauern..."
+          "plugins-install": "Vue-CLI-Plugins werden installiert. Das kann ein bisschen dauern...",
+          "plugins-update": "Aktualisiere {arg0} Plugins..."
+        }
+      },
+      "mocha": {
+        "tasks": {
+          "test": {
+            "description": "Unit-Tests mit Mocha ausführen",
+            "watch": "Dateien auf Änderungen beobachten und zugehörige Tests zu den geänderten Dateien ausführen"
+          }
         }
       },
       "nightwatch": {
         "tasks": {
           "test": {
+            "config": "Benutzerdefinierte Nightwatch-Config verwenden (überschreibt die interne Konfiguration)",
             "description": "Führe e2e-Tests mit nightwatch aus",
+            "env": "Komma-separierte Browser-Umgebungen, in denen gestartet wird",
             "url": "e2e-Tests gegen die angegebene URL laufen lassen statt automatisch einen Entwicklungsserver zu starten"
           }
         }
@@ -221,6 +320,14 @@
               "message": "Plugin-Modus"
             }
           }
+        },
+        "suggestions": {
+          "open-manifest": {
+            "label": "Manifest öffnen"
+          },
+          "open-vue": {
+            "label": "Vue-Konfiguration öffnen"
+          }
         }
       },
       "types": {
@@ -246,6 +353,7 @@
           "actions": {
             "cancel": "Änderungen abbrechen",
             "more-info": "Weitere Informationen",
+            "refresh": "Aktualisieren",
             "save": "Änderungen speichern"
           }
         },
@@ -281,6 +389,8 @@
               "form": {
                 "folder": {
                   "action": "Diesen Ordner auswählen",
+                  "folder-exists": "Dieser Ordner existiert bereits",
+                  "folder-name-invalid": "Ungültiger Ordnername",
                   "label": "Projekt-Ordner",
                   "placeholder": "meine-app",
                   "tooltip": "Basisordner ändern"
@@ -290,7 +400,10 @@
                   "label": "Paketverwaltung"
                 },
                 "options": {
-                  "description": "Zielordner überschreiben, falls er existiert",
+                  "force": "Zielordner überschreiben, falls er existiert",
+                  "git": "Git-Repository initialisieren (empfohlen)",
+                  "git-commit-message": "Initiale Commit-Nachricht (optional)",
+                  "git-title": "Git-Repository",
                   "label": "Zusätzliche Optionen"
                 }
               },
@@ -335,8 +448,16 @@
                 "title": "Remote-Voreinstellung konfigurieren"
               },
               "remote": {
+                "cancel": "Abbrechen",
+                "clone": "Privates Repository",
                 "description": "Voreinstellung aus einem Git-Repository übernehmen",
-                "name": "Remote-Voreinstellung"
+                "done": "Erledigt",
+                "name": "Remote-Voreinstellung",
+                "options": "Weitere Einstellungen",
+                "url": {
+                  "subtitle": "Git-Repository, zum Beispiel 'username/repo'. Du kannst auch ein Prefix 'gitlab:' oder 'bitbucket:' verwenden.",
+                  "title": "Voreinstellungs-URL"
+                }
               },
               "select": "Wähle eine Voreinstellung",
               "title": "Voreinstellungen"
@@ -344,10 +465,31 @@
           },
           "title": "Neues Projekt erstellen"
         },
+        "project-dependencies": {
+          "actions": {
+            "install": "Abhängigkeit installieren",
+            "update-all": "Alle Abhängigkeiten aktualisieren"
+          },
+          "heading": {
+            "dependencies": "Haupt-Abhängigkeiten",
+            "devDependencies": "Entwickler-Abhängigkeiten"
+          },
+          "install": {
+            "title": "Neue Abhängigkeit installieren"
+          },
+          "title": "Projekt-Abhängigkeiten",
+          "uninstall": {
+            "body": "Bist du sicher, dass du {id} deinstallieren möchtest?",
+            "cancel": "Abbrechen",
+            "title": "Deinstallation bestätigen",
+            "uninstall": "Deinstalliert {id}"
+          }
+        },
         "project-plugins": {
           "button": "Plugin hinzufügen",
           "heading": "Installierte Plugins",
-          "title": "Projekt-Plugins"
+          "title": "Projekt-Plugins",
+          "update-all": "Alle Plugins aktualisieren"
         },
         "project-plugins-add": {
           "modal": {
@@ -375,6 +517,7 @@
             "search": {
               "buttons": {
                 "cancel": "Abbrechen",
+                "default-install": "Installieren",
                 "install": "Installiere {target}"
               },
               "label": "Suche",
@@ -388,6 +531,13 @@
           "buttons": {
             "create": "Hier ein neues Projekt erstellen",
             "import": "Diesen Ordner importieren"
+          },
+          "import": {
+            "no-modules": {
+              "close": "Alles klar",
+              "message": "Es sieht so aus, als fehlt in deinem Projekt der 'node_modules' Ordner. Bitte prüfe vor dem Import, dass die Abhängigkeiten installiert hast.",
+              "title": "Fehlendes Modul"
+            }
           },
           "tabs": {
             "create": "Neu",
@@ -418,6 +568,53 @@
           "go-home": "Gehe zur Startseite",
           "go-up": "Gehe eine Ebene hoch",
           "title": "Analyse"
+        },
+        "config": {
+          "vue-cli": {
+            "assetsDir": {
+              "description": "Ein Verzeichnis, um generierte statische Assets (js, css, img, fonts) verschachtelt abzulegen.",
+              "label": "Assets-Verzeichnis"
+            },
+            "baseUrl": {
+              "description": "Die Basis-URL deiner Anwendung, auf der diese eingerichtet wird, zum Beispiel '/my-app/'. Verwende einen leeren String (''), damit alle Assets mit relativen Pfaden verlinkt werden.",
+              "label": "Basis-URL"
+            },
+            "css": {
+              "extract": {
+                "description": "Ob CSS aus deinen Komponenten in Standalone-CSS-Dateien extrahiert werden sollen (anstatt direkt in JavaScript eingebunden und injiziert zu werden).",
+                "label": "CSS extrahieren"
+              },
+              "modules": {
+                "description": "Standardmäßig werden nur auf *.module.[ext] endende Dateien als CSS-Module betrachtet. Durch Aktivieren dieser Option werden alle Style-Dateien als CSS-Module behandelt",
+                "label": "CSS-Module aktivieren"
+              },
+              "sourceMap": {
+                "description": "Ob Source-Maps für CSS aktiviert werden sollen. Das Aktivieren kann die Build-Performanece beeinflussen.",
+                "label": "CSS-Source-Maps aktivieren"
+              }
+            },
+            "description": "Konfiguriere dein Vue-Projekt",
+            "groups": {
+              "css": "CSS-Einstellungen",
+              "general": "Allgemeine Einstellungen"
+            },
+            "outputDir": {
+              "description": "Das Verzeichnis, indem der Produktionsbuild generiert wird.",
+              "label": "Ausgabe-Verzeichnis"
+            },
+            "parallel": {
+              "description": "Ob mehrere Prozessoren zum Kompilieren von Babel oder TypeScript verwendet werden sollen.",
+              "label": "Parallele Kompilierung"
+            },
+            "productionSourceMap": {
+              "description": "Durch Deaktivieren kann der Production-Build beschleunigt werden, sofern du für den Produktionsbetrieb keine Source-Maps benötigst.",
+              "label": "Source-Maps für Produktion aktivieren"
+            },
+            "runtimeCompiler": {
+              "description": "Dies erlaubt die Verwendung der Template-Option in Vue-Komponenten, führt jedoch zu einem zusätzlichen Payload von 10 KB für deine App.",
+              "label": "Laufzeit-Compiler aktivieren"
+            }
+          }
         },
         "dashboard": {
           "asset-list": {
@@ -450,17 +647,25 @@
             "Success": "Erfolg"
           }
         },
+        "modern-mode": "Modernen Build anzeigen",
         "sizes": {
           "gzip": "Gzip",
           "help": "<b>Statistiken:</b> Größe von den Webpack-Statistikdaten.<br><b>Parser:</b> Größe der extrahierten Quelle (nach Minifizierungs-Plugins). Genauer.<br><b>Gzip:</b> Größe der Gzip-komprimierten, extrahierten Quelle.",
           "parsed": "Parser",
           "stats": "Statistken"
         },
+        "suggestions": {
+          "vue-config-open": "Vue-Konfiguration öffnen"
+        },
         "tasks": {
           "build": {
             "description": "Kompiliert und minifiziert für Produktionsbetrieb",
             "dest": "Ausgabe-Verzeichnis",
             "mode": "Umgebungsmodus auswählen",
+            "modern": {
+              "description": "Baut die Anwendung für moderne Browser mit einem automatischen Fallback",
+              "label": "Moderner Modus"
+            },
             "name": "Name für Bibliothek- oder Web-Komponente (Standardt: 'name' in package.json oder Dateiname des Eintrags)",
             "target": {
               "app": "Web-App",
