@@ -7,7 +7,7 @@ const compareHierarchy = function(a, b, path = []) {
 
   if (typeof a === typeof b) {
     if (typeof a === "string") {
-      return true;
+      return false;
     }
 
     if (typeof a === "object") {
@@ -34,14 +34,14 @@ const compareHierarchy = function(a, b, path = []) {
 
       const both = _.intersection(aKeys, bKeys);
       both.forEach(
-        key => (hasErrors &= compareHierarchy(a[key], b[key], [...path, key]))
+        key => (hasErrors |= compareHierarchy(a[key], b[key], [...path, key]))
       );
     }
   } else {
     console.error(
       `\x1b[32m\x1b[1m${pathString}\x1b[0m → \x1b[31mleft type:\x1b[0m \x1b[33m\x1b[1m${typeof a}\x1b[0m vs. \x1b[31mright type:\x1b[0m \x1b[33m\x1b[1m${typeof b}\x1b[0m`
     );
-    hasErrors = false;
+    hasErrors = true;
   }
 
   return hasErrors;
