@@ -449,7 +449,7 @@
       "vue-webpack": {
         "dashboard": {
           "title": "Dashboard",
-          "open-app": "Ap öffnen",
+          "open-app": "App öffnen",
           "webpack-status": {
             "Success": "Erfolg",
             "Failed": "Fehlgeschlagen",
@@ -485,7 +485,7 @@
           "chunk": "Stück"
         },
         "sizes": {
-          "stats": "Statistken",
+          "stats": "Statistiken",
           "parsed": "Parser",
           "gzip": "Gzip",
           "help": "<b>Statistiken:</b> Größe von den Webpack-Statistikdaten.<br><b>Parser:</b> Größe der extrahierten Quelle (nach Minifizierungs-Plugins). Genauer.<br><b>Gzip:</b> Größe der Gzip-komprimierten, extrahierten Quelle."
