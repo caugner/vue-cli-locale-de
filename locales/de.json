@@ -449,7 +449,7 @@
       "vue-webpack": {
         "dashboard": {
           "title": "Dashboard",
-          "open-app": "Ap öffnen",
+          "open-app": "App öffnen",
           "webpack-status": {
             "Success": "Erfolg",
             "Failed": "Fehlgeschlagen",
